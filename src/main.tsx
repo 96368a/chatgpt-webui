@@ -2,8 +2,8 @@ import App from './App'
 import { dict } from './modules/i18n'
 
 import '@unocss/reset/tailwind.css'
-import '~/styles/main.css'
 import 'uno.css'
+import '~/styles/main.css'
 import { I18nProvider } from '~/components/I18nProvider'
 
 render(

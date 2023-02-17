@@ -2,6 +2,7 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
   presetWebFonts,
   // transformerDirectives,
@@ -16,6 +17,26 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
+    presetTypography({
+      selectorName: 'markdown', // now use like `markdown markdown-gray`, `not-markdown`
+      // cssExtend is an object with CSS selector as key and
+      // CSS declaration block as value like writing normal CSS.
+      cssExtend: {
+        '.prose>p': {
+          margin: '0',
+          color: 'rgb(55, 65, 81)'
+        },
+        'code': {
+          color: '#8b5cf6',
+        },
+        'a:hover': {
+          color: '#f43f5e',
+        },
+        'a:visited': {
+          color: '#14b8a6',
+        },
+      },
+    }),
     presetIcons({
       scale: 1.2,
       warn: true,

@@ -3,7 +3,7 @@ import routes from '~solid-pages'
 
 export default function App() {
   return (
-    <main class="font-sans dark:text-gray-200">
+    <main class="h-full dark:text-gray-200">
       <Router>
         <Routes />
       </Router>
